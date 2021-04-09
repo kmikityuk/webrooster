@@ -1,0 +1,11 @@
+body {
+  background:#fff;
+  color:#111;
+  font-family:'Helvetica',sans-serif;
+  font-size:16px;
+  height:100%;
+  line-height:1.65;
+  margin:0;
+  text-align:left;
+  width:100%;
+}
