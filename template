@@ -13,10 +13,9 @@
       
          <div style='padding-bottom:100px;'>
             <div style='background:black; height:20px; width:100%;'></div>
-
-            <div style='padding:0 20px 20px 20px; font-family:Times; font-size:36px;'><u>R</u>obust <u>O</u>bject <u>O</u>riented <u>S</u>olver of <u>T</u>ransport <u>E</u>quations in <u>R</u>eactor</div>
-INSERTHERE            
-            <br><br><br><br>
+            <div style='padding:0 20px 0 20px; font-family:Times; font-size:36px;'><u>R</u>obust <u>O</u>bject <u>O</u>riented <u>S</u>olver of <u>T</u>ransport <u>E</u>quations in a <u>R</u>eactor</div>
+INSERTHERE
+            <br><br>
          </div>
          <div style='background:black; bottom:0; height:100px; left:0; position:absolute; width:100%;'></div>
       </div>
