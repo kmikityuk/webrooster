@@ -1,0 +1,24 @@
+            <ul style='list-style-type:square; margin:0; font-family:Helvetica; font-size:16px;'>
+               <li style='margin:10px;'>ROOSTER is a code written in Python for predicting behaviour of a fast-spectrum neutron critical fission systems in steady-state and transient conditions.</li>
+               <li style='margin:10px;'>The code is mainly written and managed by students:</li>
+               <div>&nbsp;&nbsp;&nbsp;&#9472;&nbsp;Completed projects</div>
+               <div>&nbsp;&nbsp;&nbsp;&#9472;&nbsp;Ongoing projects</div>
+               <div>&nbsp;&nbsp;&nbsp;&#9472;&nbsp;Projects open for contributions</div>
+               <li style='margin:10px;'>Code structure.</li>
+               <li style='margin:10px;'>Tree of classes:</li>
+               <code>
+                  Reactor<br>
+                  &#9493;&#9472;&nbsp;Control<br>
+                  &#9493;&#9472;&nbsp;Solid<br>
+                  &nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;Structure<br>
+                  &nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;FuelRod<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;Fuel<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;FuelGrain<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;Gap<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;Clad<br>
+                  &#9493;&#9472;&nbsp;Fluid<br>
+                  &#9493;&#9472;&nbsp;Neutron<br>
+                  &nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;PointKinetics<br>
+                  &nbsp;&nbsp;&nbsp;&#9493;&#9472;&nbsp;SpatialKinetics<br>
+               </code>
+            </ul>
