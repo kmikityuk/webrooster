@@ -14,18 +14,26 @@ f = open('index.html', mode = 'w')
 f.write(t1[0] + i0 + t1[1])
 f.close()
 
-#read structure and write structure.html
-f = open('structure', mode = 'r')
+#read architecture and write architecture.html
+f = open('architecture', mode = 'r')
 i0 = f.read()
 f.close()
-f = open('structure.html', mode = 'w')
+f = open('architecture.html', mode = 'w')
 f.write(t1[0] + i0 + t1[1])
 f.close()
 
-#read ongoing and write ongoing.html
+#read ongoing_projects and write ongoing_projects.html
 f = open('ongoing_projects', mode = 'r')
 i0 = f.read()
 f.close()
 f = open('ongoing_projects.html', mode = 'w')
+f.write(t1[0] + i0 + t1[1])
+f.close()
+
+#read open_projects and write open_projects.html
+f = open('open_projects', mode = 'r')
+i0 = f.read()
+f.close()
+f = open('open_projects.html', mode = 'w')
 f.write(t1[0] + i0 + t1[1])
 f.close()

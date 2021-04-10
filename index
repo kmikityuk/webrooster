@@ -1,9 +1,9 @@
             <div style='margin:0; font-family:Helvetica; font-size:16px;'>
                <div style='margin:0; padding:0 20px 20px 20px; font-size:12px; color:red;'>Home</div>
                <div style='margin:0; padding:0 20px 20px 20px;'>ROOSTER is a code written in Python for predicting behaviour of a fast neutron critical fission systems in steady-state and transient conditions.</div>
-               <div style='margin:0; padding:0 20px 10px 20px;'>ROOSTER is mainly written and managed by students:</div>
+               <div style='margin:0px; padding:0 20px 20px 20px;'><a href='architecture.html'>Code architecture</a></div>
+               <div style='margin:0; padding:0 20px 10px 20px;'>The code is mainly developed and managed by students:</div>
                <div style='margin:0; padding:0 20px 10px 20px;'>&#9472;&nbsp;Completed projects</div>
                <div style='margin:0; padding:0 20px 10px 20px;'>&#9472;&nbsp;<a href='ongoing_projects.html'>Ongoing projects</a></div>
-               <div style='margin:0; padding:0 20px 20px 20px;'>&#9472;&nbsp;Projects open for contributions</div>
-               <div style='margin:0px; padding:0 20px 20px 20px;'><a href='structure.html'>ROOSTER structure</a></div>
+               <div style='margin:0; padding:0 20px 20px 20px;'>&#9472;&nbsp;<a href='open_projects.html'>Projects open for contributions</a></div>
             </div>
