@@ -17,7 +17,7 @@
 INSERTHERE
             <br><br>
          </div>
-         <div style='background:black; bottom:0; height:100px; left:0; position:absolute; width:100%;'></div>
+         <div style='background:#333; bottom:0; color:#eee; font-family:Helvetica; font-size:12px; height:100px; left:0; padding:20px; position:absolute; width:calc(100% - 40px);'>Code supervisor: <a href='https://www.psi.ch/en/lsm/people/konstantin-mikityuk' style='color:#eee;'>Dr. Konstantin Mikityuk</a><br>Paul Scherrer Institute<br>Switzerland</div>
       </div>
    </body>
 </html>

@@ -41,17 +41,17 @@
                At the very top of the code the <code>r</code> object is created as follows: <code>r = Reactor()</code> and 
                virtually everything happens in the constructor of the <code>Reactor</code> class. 
                First, four objects are created from classes <code>Control</code>, <code>Solid</code>, <code>Fluid</code> and <code>Neutron</code>.
-               Then the list of unknowns is initialized and the system of Ordinary Differenial Equations (ODEs) are solved using 
+               Then the list of unknowns is initialized and the system of Ordinary Differenial Equations (ODEs) is solved using 
                the Livermore Solver for Ordinary Differential Equations with Sparse Jacobian (LSODES) which is the engine of the ROOSTER code. 
-               LSODES (available in the SciPy package) solves stiff system of ODEs of the form <code>dy/dt = f(t,y)</code>. 
+               LSODES (available in the SciPy package) solves a stiff system of ODEs of the form <code>dy/dt = f(t,y)</code>. 
                The vector of the right-hand sides of this system is constructed in the <code>construct_rhs</code> function defined in the <code>Reactor</code> class
                by calling four functions defined in classes <code>Control</code>, <code>Solid</code>, <code>Fluid</code> and <code>Neutron</code> 
-               and calculating the right-hand sides of the corresponding parts of the whole systems of ODEs.
+               and calculating the right-hand sides of the corresponding parts of the whole system of ODEs.
             </div>
 
             <br><br>
          </div>
-         <div style='background:black; bottom:0; height:100px; left:0; position:absolute; width:100%;'></div>
+         <div style='background:#333; bottom:0; color:#eee; font-family:Helvetica; font-size:12px; height:100px; left:0; padding:20px; position:absolute; width:calc(100% - 40px);'>Code supervisor: <a href='https://www.psi.ch/en/lsm/people/konstantin-mikityuk' style='color:#eee;'>Dr. Konstantin Mikityuk</a><br>Paul Scherrer Institute<br>Switzerland</div>
       </div>
    </body>
 </html>
