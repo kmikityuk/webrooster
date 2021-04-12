@@ -15,13 +15,13 @@
             <div style='background:black; height:20px; width:100%;'></div>
             <div style='padding:0 20px 0 20px; font-family:Times; font-size:36px;'><u>R</u>obust <u>O</u>bject <u>O</u>riented <u>S</u>olver of <u>T</u>ransport <u>E</u>quations in a <u>R</u>eactor</div>
             <div style='margin:0; font-family:Helvetica; font-size:16px;'>
-               <div style='margin:0; padding:0 20px 20px 20px; font-size:12px;'><a href='index.html'>Home</a> | <span style='color:red;'>Code architecture</span></div>
+               <div style='margin:0; padding:0 20px 20px 20px; font-size:12px;'><a href='index.html'>Home</a> | <a href='architecture.html'>Code architecture</a> | <span style='color:red;'><code>Control</code></span></div>
                <div style='display:flex;'>
                   <div style='margin:0; padding:0 20px 20px 20px;'>
                      <div style='margin:0; padding:0 20px 20px 0;'>Tree of classes:</div>
                      <code style='white-space:nowrap;'>
-                        <b>Reactor</b><br>
-                        &#9500;&#9472;&nbsp;<a href='control.html'>Control</a><br>
+                        Reactor<br>
+                        &#9500;&#9472;&nbsp;<b>Control</b><br>
                         &#9500;&#9472;&nbsp;Solid<br>
                         &#9474;&nbsp; &#9500;&#9472; &nbsp;Structure<br>
                         &#9474;&nbsp; &#9492;&#9472; &nbsp;FuelRod<br>
@@ -36,16 +36,13 @@
                      </code>
                   </div>
                   <div style='margin:0; padding:0 20px 20px 20px;'>
-                     <br><br>At the very top of the code the <code>r</code> object is created as follows: <code>r = Reactor()</code> and 
-                     virtually everything happens in the constructor of the <code>Reactor</code> class. 
-                     First, four objects are created from classes <code>Control</code>, <code>Solid</code>, <code>Fluid</code> and <code>Neutron</code>.
-                     Then the list of unknowns is initialized and the system of Ordinary Differenial Equations (ODEs) is solved using 
-                     the Livermore Solver for Ordinary Differential Equations with Sparse Jacobian (LSODES) which is the engine of the ROOSTER code. 
-                     LSODES (available in the SciPy package) solves a stiff system of ODEs of the form <code>dy/dt = f(t,y)</code>. 
-                     The vector of the right-hand sides of this system is constructed in the <code>construct_rhs(t, y)</code> function 
-                     defined in the <code>Reactor</code> class by calling four <code>calculate_rhs(self, reactor, t)</code> functions 
-                     defined in classes <code>Control</code>, <code>Solid</code>, <code>Fluid</code> and <code>Neutron</code> 
-                     and calculating the right-hand sides of the corresponding parts of the whole system of ODEs.
+                     <br><br>The <code>Control</code> class is responsible for reading the <code>input</code> file (function <code>construct_input()</code> called in the <code>Control</code> class constructor) and
+                     evaluating the signals and control blocks*. All input data are stored in the dictionary <code>reactor.inp</code>. 
+                     If the control block requires integration of an Ordinary Differential Equation (ODE) with respect to time, 
+                     the right-hand side of this ODE is included* in the overall system of ODEs through the <code>calculate_rhs(self, reactor, t)</code> function 
+                     called by the <code>Reactor</code> class constructor.
+                     <br><br>
+                     *<span style='font-size:12px;'>under development</span>
                   </div>
                </div>
             </div>
