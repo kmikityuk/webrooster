@@ -20,7 +20,7 @@
                   <div style='margin:0; padding:0 20px 20px 20px;'>
                      <div style='margin:0; padding:0 20px 20px 0;'>Tree of classes:</div>
                      <code style='white-space:nowrap;'>
-                        Reactor<br>
+                        <a href='architecture.html'>Reactor</a><br>
                         &#9500;&#9472;&nbsp;<b>Control</b><br>
                         &#9500;&#9472;&nbsp;Solid<br>
                         &#9474;&nbsp; &#9500;&#9472; &nbsp;Structure<br>
@@ -37,9 +37,9 @@
                   </div>
                   <div style='margin:0; padding:0 20px 20px 20px;'>
                      <br><br>The <code>Control</code> class is responsible for reading the <code>input</code> file (function <code>construct_input()</code> called in the <code>Control</code> class constructor) and
-                     evaluating the signals and control blocks*. All input data are stored in the dictionary <code>reactor.inp</code>. 
+                     for evaluating signals and control blocks*. All input data are stored in the dictionary <code>reactor.inp</code>. 
                      If the control block requires integration of an Ordinary Differential Equation (ODE) with respect to time, 
-                     the right-hand side of this ODE is included* in the overall system of ODEs through the <code>calculate_rhs(self, reactor, t)</code> function 
+                     the right-hand side of this ODE is included* in the overall system of ODEs through the <code>control.calculate_rhs(self, reactor, t)</code> function 
                      called by the <code>Reactor</code> class constructor.
                      <br><br>
                      *<span style='font-size:12px;'>under development</span>
