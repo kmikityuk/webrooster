@@ -40,7 +40,12 @@
                      The constructor of the <code>Solid</code> class creates the <code>structure</code> and <code>fuelrod</code> objects
                      from the <code>Structure</code> and <code>FuelRod</code> classes as well as initializes the vector of unknowns from 
                      those built in the <code>Structure</code> and <code>FuelRod</code> classes.
-                     <br><br>
+
+                     <br><br>The <code>calculate_rhs(self, reactor, t)</code> function is defined in the <code>Solid</code> class and called 
+                     in the constructor of the <code>Reactor</code> class just to constructs the right-hand side vector by calling 
+                     <code>structure.calculate_rhs(self, reactor, t)</code> and <code>fueldrod.calculate_rhs(self, reactor, t)</code> functions 
+                     calculating the right-hand sides of the corresponding parts of the whole system of ODEs.<br><br>
+
                      *<span style='font-size:12px;'>under development</span>
                   </div>
                </div>
