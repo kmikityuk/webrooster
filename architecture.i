@@ -6,7 +6,7 @@
                      <code style='white-space:nowrap;'>
                         <b>Reactor</b><br>
                         &#9500;&#9472;&nbsp;<a href='control.html'>Control</a><br>
-                        &#9500;&#9472;&nbsp;Solid<br>
+                        &#9500;&#9472;&nbsp;<a href='solid.html'>Solid</a><br>
                         &#9474;&nbsp; &#9500;&#9472; &nbsp;Structure<br>
                         &#9474;&nbsp; &#9492;&#9472; &nbsp;FuelRod<br>
                         &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9500;&#9472;&nbsp;Fuel<br>
