@@ -9,9 +9,9 @@
                         &#9500;&#9472;&nbsp;<b>Solid</b><br>
                         &#9474;&nbsp; &#9500;&#9472; &nbsp;Structure<br>
                         &#9474;&nbsp; &#9492;&#9472; &nbsp;FuelRod<br>
-                        &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9500;&#9472;&nbsp;Fuel<br>
+                        &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9500;&#9472;&nbsp;FuelPellet<br>
                         &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9474;&nbsp; &#9492;&#9472;&nbsp;FuelGrain<br>
-                        &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9500;&#9472;&nbsp;Gap<br>
+                        &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9500;&#9472;&nbsp;InnerGas<br>
                         &#9474;&nbsp; &nbsp; &nbsp;  &nbsp;&#9492;&#9472;&nbsp;Clad<br>
                         &#9500;&#9472;&nbsp;Fluid<br>
                         &#9492;&#9472;&nbsp;Neutron<br>
@@ -27,7 +27,7 @@
                      those built in the <code>Structure</code> and <code>FuelRod</code> classes.
 
                      <br><br>The <code>calculate_rhs(self, reactor, t)</code> function is defined in the <code>Solid</code> class and called 
-                     in the constructor of the <code>Reactor</code> class just to constructs the right-hand side vector by calling 
+                     in the constructor of the <code>Reactor</code> class just to construct the right-hand side vector by calling 
                      <code>structure.calculate_rhs(self, reactor, t)</code> and <code>fueldrod.calculate_rhs(self, reactor, t)</code> functions 
                      calculating the right-hand sides of the corresponding parts of the whole system of ODEs.<br><br>
 
