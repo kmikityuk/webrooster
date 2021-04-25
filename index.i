@@ -2,7 +2,8 @@
                <div style='margin:0; padding:0 20px 20px 20px; font-size:12px; color:red;'>Home</div>
                <div style='display:flex;'>
                   <div style='margin:0px; padding:0 20px 20px 20px;'>
-                     <a href='architecture.html'>Code&nbsp;architecture</a><br><br>
+                     <a href='architecture.html'>Code&nbsp;architecture</a><br>
+                     <a href='input.html'>Input&nbsp;description</a><br><br>
                      <a href='ongoing_projects.html'>Ongoing projects</a><br>
                      <a href='open_projects.html'>Open projects</a><br>
                   </div>
