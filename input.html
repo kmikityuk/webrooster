@@ -173,9 +173,9 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined flowrate, the time derivative of mass flowrate is set to zero and flowrate is set equal to the specifieed signal at the current time.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
-<div style='background-color:#cdeefd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>jun-i-f</code> : Independent junction with user-defined pump head</div>
+<div style='background-color:#cdeefd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>jun-i-p</code> : Independent junction with user-defined pump head</div>
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<code>* Inependent junction with user-defined flowrate</code><br>
+<code>* Inependent junction with user-defined pump head</code><br>
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <pre style='margin:0;'><code>*****     from      to        signal</code></pre>
 <pre style='margin:0;'><code>jun-i-p   PLN       DOWN      PMPHEAD_VS_T</code></pre>
@@ -187,6 +187,32 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <br>
 <div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined pump head, the specifieed signal at the current time is added to the right-hand side of the momentum conservation equation.</div>
 <br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>lookup</code> : Lookup table control block</div>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     insignal  outsignal</code></pre>
+<pre style='margin:0;'><code>lookup    TIME      PMPHEAD_VS_T &</code></pre>
+<pre style='margin:0;'><code>          0.0       0       &</code></pre>
+<pre style='margin:0;'><code>          10.0      1e5</code></pre>
+<code style='white-space:nowrap;'>*</code><br>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     insignal  outsignal</code></pre>
+<pre style='margin:0;'><code>lookup    TIME      MDOT_VS_T &</code></pre>
+<pre style='margin:0;'><code>          0.0       0       &</code></pre>
+<pre style='margin:0;'><code>          10.0      10</code></pre>
+<code style='white-space:nowrap;'>*</code><br>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     insignal  outsignal</code></pre>
+<pre style='margin:0;'><code>lookup    TIME      TEMP_VS_T &</code></pre>
+<pre style='margin:0;'><code>          0.0       0       &</code></pre>
+<pre style='margin:0;'><code>          10.0      700</code></pre>
+<br>
+<div>The control block is specified by a list of pairs starting with:</div>
+<br>
+<div><code>insignal</code> : id of the input signal <code>x</code> which is either defined in the <code>signal</code> card or the output signal of another control block and</div>
+<div><code>outsignal</code> : id of the output signal <code>y</code></div>
+<br>
+<div>and followed by <code>N</code> pairs of numerical values <code>x(i)</code> and <code>y(i)</code> to approximate a function <code>y = f(x)</code>. At every time step an output signal <code>y</code> is linearly interpolated for current value of the input signal <code>x</code>. .</div>
 
                   </div>
                </div>
