@@ -29,7 +29,7 @@ It consists of lines (cards) identified by keywords.
 The card are presented below by examples in alphabetical order of the keywords. 
 All numerical values and upper-case words are specified by users. 
 The low-case words are keywords and should not be changed.
-The colour code indicates the class to which the card "belongs": <code style='background-color:#ccfdcc;'>Control</code>, <code style='background-color:#cdeefd;'>Fluid</code>, <code style='background-color:#fadadd;'>Neutron</code> and <code style='background-color:#ccc;'>Solid</code>.
+The colour code indicates the class to which the card "belongs": <code style='background-color:#ccfdcc;'>Control</code>, <code style='background-color:#cdeefd;'>Fluid</code>, <code style='background-color:#fadadd;'>Core</code> and <code style='background-color:#ccc;'>Solid</code>.
 </div><br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>*</code> : Comment</div>
@@ -170,7 +170,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>to</code> : id of the user-defined pipe id the junction comes to.</div>
 <div><code>signal</code> : id of the user-defined signal of flowrate in the junction.</div>
 <br>
-<div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined flowrate, the time derivative of mass flowrate is set to zero and flowrate is set equal to the specified signal at the current time.</div>
+<div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined flowrate, the time derivative of mass flowrate is set to zero and flowrate is set equal to the specified signal at the current time step.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#cdeefd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>jun-i-p</code> : Independent junction with user-defined pump head</div>
@@ -185,7 +185,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>to</code> : id of the user-defined pipe id the junction comes to.</div>
 <div><code>signal</code> : id of the user-defined signal of pump head in the junction.</div>
 <br>
-<div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined pump head, the specifieed signal at the current time is added to the right-hand side of the momentum conservation equation.</div>
+<div>The mass flowrate in the dependent junction could be found from mass flowrates in independent juntions which found by integration of the momentum conservation equations. In case of the independent junction with user-defined pump head, the specifieed signal at the current time step is added to the right-hand side of the momentum conservation equation.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>lookup</code> : Lookup table control block</div>
@@ -313,7 +313,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>nnodes</code> : number of nodes;</div>
 <div><code>signal</code> : id of the signal specifying temperature in all nodes of the pipe.</div>
 <br>
-<div>The time derivative of temperature in every node of the pipe is set to zero and temperature is set equal to the specified signal at the current time.</div>
+<div>The time derivative of temperature in every node of the pipe is set to zero and temperature is set equal to the specified signal at the current time step.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>solve</code> : Model activation flag</div>
@@ -347,7 +347,7 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <br>
 <div>Currently available signals (under development):</div>
    <div style='margin:0 0 0 20px'>
-   <div><code>time</code>: current time (s).</div>
+   <div><code>time</code>: time of the problem(s).</div>
 </div>
 <br>
 <!------------------------------------------------------------------------------------------------>
