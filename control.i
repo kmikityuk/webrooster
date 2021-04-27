@@ -7,16 +7,16 @@
                         <a href='architecture.html'>Reactor</a><br>
                         &#9500;&#9472;&nbsp;<b>Control</b><br>
                         &#9500;&#9472;&nbsp;<a href='solid.html'>Solid</a><br>
-                        &#9474;&nbsp;&nbsp;&#9500;&#9472;&nbsp;Structure<br>
-                        &#9474;&nbsp;&nbsp;&#9492;&#9472;&nbsp;FuelRod<br>
-                        &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&nbsp;Fuel<br>
-                        &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&nbsp;&nbsp;&#9492;&#9472;&nbsp;FuelGrain<br>
+                        &#9474;&nbsp;&nbsp;&#9500;&#9472;&nbsp;Structure[]<br>
+                        &#9474;&nbsp;&nbsp;&#9492;&#9472;&nbsp;FuelRod[]<br>
+                        &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&nbsp;Fuel[]<br>
+                        &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9474;&nbsp;&nbsp;&#9492;&#9472;&nbsp;FuelGrain[]<br>
                         &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9500;&#9472;&nbsp;InnerGas<br>
-                        &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&nbsp;Clad<br>
+                        &#9474;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&nbsp;Clad[]<br>
                         &#9500;&#9472;&nbsp;Fluid<br>
                         &#9492;&#9472;&nbsp;Core<br>
-                        &nbsp;&nbsp;&nbsp;&#9492;&#9472;&nbsp;Mix<br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9492;&#9472;&nbsp;Isotope<br>
+                        &nbsp;&nbsp;&nbsp;&#9500;&#9472;&nbsp;Isotope[]<br>
+                        &nbsp;&nbsp;&nbsp;&#9492;&#9472;&nbsp;Mix[]<br>
                      </code>
                   </div>
                   <div style='margin:0; padding:0 20px 20px 20px;'>
