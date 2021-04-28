@@ -296,6 +296,24 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div>The time derivative of temperature in every node of the pipe is set to zero and temperature is set equal to the specified signal at the current time step.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
+<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>signal</code> : User-defined signal</div>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code style='white-space:nowrap;'>* Signals</code><br>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     id        value</code></pre>
+<pre style='margin:0;'><code>signal    TIME      time</code></pre>
+<pre style='margin:0;'><code>constant  PI        3.14159</code></pre>
+<br>
+<div><code>id</code>: user-defined signal id;</div>
+<div><code>type</code>: signal value.</div>
+<br>
+<div>Currently available signals (under development):</div>
+   <div style='margin:0 0 0 20px'>
+   <div><code>0.0</code>: any constant numeric value;</div>
+   <div><code>time</code>: time of the problem(s).</div>
+</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>solve</code> : Model activation flag</div>
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code style='white-space:nowrap;'>* Model activation flags</code><br>
@@ -313,24 +331,6 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 </div>
 <br>
 <div>Note that even if the respective cards are present in the input file, the task will not be solved unless activated by the <code>solve</code> card.</div>
-<br>
-<!------------------------------------------------------------------------------------------------>
-<div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>signal</code> : User-defined signal</div>
-<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<code style='white-space:nowrap;'>* Signals</code><br>
-<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'><code>*****     id        value</code></pre>
-<pre style='margin:0;'><code>signal    TIME      time</code></pre>
-<pre style='margin:0;'><code>constant  PI        3.14159</code></pre>
-<br>
-<div><code>id</code>: user-defined signal id;</div>
-<div><code>type</code>: signal value.</div>
-<br>
-<div>Currently available signals (under development):</div>
-   <div style='margin:0 0 0 20px'>
-   <div><code>0.0</code>: any constant numeric value;</div>
-   <div><code>time</code>: time of the problem(s).</div>
-</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>t0</code> : Initial time</div>
