@@ -62,11 +62,6 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>nr</code> : number of radial nodes.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
-<div style='background-color:#ccffcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>constant</code> :Constant value</div>
-<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'><code>constant  PI        3.14159</code></pre>
-<br>
-<!------------------------------------------------------------------------------------------------>
 <div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>dnplmb</code> : Delayed neutron precursor decay time constants</div>
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code>* Delayed neutron precursor decay time constants in 6 time groups (1/s)</code><br>
@@ -339,14 +334,16 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code style='white-space:nowrap;'>* Signals</code><br>
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
-<pre style='margin:0;'><code>*****     id        type</code></pre>
+<pre style='margin:0;'><code>*****     id        value</code></pre>
 <pre style='margin:0;'><code>signal    TIME      time</code></pre>
+<pre style='margin:0;'><code>constant  PI        3.14159</code></pre>
 <br>
 <div><code>id</code>: user-defined signal id;</div>
-<div><code>type</code>: signal type.</div>
+<div><code>type</code>: signal value.</div>
 <br>
 <div>Currently available signals (under development):</div>
    <div style='margin:0 0 0 20px'>
+   <div><code>0.0</code>: any constant numeric value;</div>
    <div><code>time</code>: time of the problem(s).</div>
 </div>
 <br>
