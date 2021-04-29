@@ -334,15 +334,30 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <code style='white-space:nowrap;'>* Model activation flags</code><br>
 <code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <pre style='margin:0;'><code>*****     model</code></pre>
+<pre style='margin:0;'><code>solve     fgrain</code></pre>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     model</code></pre>
 <pre style='margin:0;'><code>solve     fluid</code></pre>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     model</code></pre>
 <pre style='margin:0;'><code>solve     fuelrod</code></pre>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     model</code></pre>
+<pre style='margin:0;'><code>solve     pointkinetics</code></pre>
+<code style='white-space:nowrap;'>*---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>*****     model               ng</code></pre>
+<pre style='margin:0;'><code>solve     spatialkinetics     25</code></pre>
 <br>
-<div><code>task</code>: keyword of the model to be solved:</div>
-   <div style='margin:0 0 0 20px'>
+<div><code>model</code>: keyword of the model to be solved:</div>
+<div style='margin:0 0 0 20px'>
    <div><code>fgrain</code>: fission gas behaviour model (under development);</div>
    <div><code>fluid</code> : thermal-hydraulic model;</div>
    <div><code>fuelrod</code> : fuel rod behaviour model (<code>fluid</code> should be activated);</div>
-   <div><code>poinkinetics</code> : point reactor kinetics model.</div>
+   <div><code>pointkinetics</code> : point reactor kinetics model;</div>
+   <div><code>spatialkinetics</code> : spatial reactor kinetics model;</div>
+   <div style='margin:0 0 0 20px'>
+      <div><code>ng</code> : number of energy groups.</div>
+   </div>
 </div>
 <br>
 <div>Note that even if the respective cards are present in the input file, the task will not be solved unless activated by the <code>solve</code> card.</div>
