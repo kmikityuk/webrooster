@@ -9,11 +9,11 @@
                   </div>
                   <div style='margin:0; padding:0 20px 20px 20px;'>
                      &#9472;&nbsp;Development of the fuel rod thermal-mechanical model.<br>
-                     &#9472;&nbsp;Conversion of the LSODES ODE solver from Fortran to Python.<br>
+                     <!-- &#9472;&nbsp;Conversion of the LSODES ODE solver from Fortran to Python.<br> -->
                      &#9472;&nbsp;Parallelization of the LSODES ODE solver.<br>
                      &#9472;&nbsp;Development of the 3D subchannel model.<br>
                      &#9472;&nbsp;Validation of separate and coupled models using reactor data and dedicated tests.<br>
-                     &#9472;&nbsp;Development of a control system (symbolic computations).<br>
+                     <!--&#9472;&nbsp;Development of a control system (symbolic computations).<br>-->
                   </div>
                </div>
             </div>
