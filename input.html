@@ -17,10 +17,10 @@
                <div style='margin:0; padding:0 20px 20px 20px; font-size:12px;'><a href='index.html'>Home</a> | <span style='color:red;'>Open projects</span></div>
                <div style='display:flex;'>
                   <div style='margin:0px; padding:0 20px 20px 20px;'>
-                     <a href='architecture.html'>Code architecture</a><br>
-                     Input description<br><br>
-                     <a href='ongoing_projects.html'>Ongoing projects</a><br>
-                     <a href='open_projects.html'>Open projects</a><br>
+                     <a href='architecture.html'>Code&nbsp;architecture</a><br>
+                     Input&nbsp;description<br><br>
+                     <a href='ongoing_projects.html'>Ongoing&nbsp;projects</a><br>
+                     <a href='open_projects.html'>Open&nbsp;projects</a><br>
                   </div>
                   <div style='margin:0; padding:0 20px 20px 20px; width:min-content;'>
 <div>
@@ -60,6 +60,72 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div><code>ri</code> : inner radius of cladding tube (m);</div>
 <div><code>ro</code> : outer radius of cladding tube (m); </div>
 <div><code>nr</code> : number of radial nodes.</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>coregeom</code> : Core geometry</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Core geometry</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>#####     geometry  pitch(m)  botBC     topBC</code></pre>
+<pre style='margin:0;'><code>coregeom  hex06     0.18018   0         0</code></pre>
+<br>
+<div><code>geometry</code> : flag of core geometry:</div>
+   <div style='margin:0 0 0 20px'><code>square</code>: square geometry;</div>
+   <div style='margin:0 0 0 20px'><code>hex01</code>: hexagonal geometry with 1 node per hexagon;</div>
+   <div style='margin:0 0 0 20px'><code>hex06</code>: hexagonal geometry with 6 node per hexagon;</div>
+   <div style='margin:0 0 0 20px'><code>hex24</code>: hexagonal geometry with 24 node per hexagon.</div>
+<div><code>pitch</code> : distance between centers of nodes in plane (m);</div>
+<div><code>botBC</code> : flag of bottom boundary conditions:</div>
+   <div style='margin:0 0 0 20px'><code>0</code>: vacuum boundary condition</div>
+   <div style='margin:0 0 0 20px'><code>1</code>: reflective boundary condition</div>
+<div><code>topBC</code> : flag of top boundary conditions:</div>
+   <div style='margin:0 0 0 20px'><code>0</code>: vacuum boundary condition</div>
+   <div style='margin:0 0 0 20px'><code>1</code>: reflective boundary condition</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>coremap</code> : Core map</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Core map</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     #18</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     0     0  #17</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     0     #16</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     0  #15</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     #14</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0  #13</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     #12</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0    SHI   SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0     0     0     0     0  #11</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0    SHI   SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0     0     0     0     #10</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0    SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   FOU   DIL   FOU   FOU   DIL   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI    0     0     0     0     0     0  # 9</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0    SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   FOU   DIL   CSD   FIN   FIN   CSD   FIN   FIN   CSD   FOU   FOU   FOU   FOU   FOU   BLA   BLA   BLA   SHI   SHI    0     0     0     0     0     # 8</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0    SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   DIL   FOU   FOU   FOU   BLA   BLA   BLA   SHI   SHI    0     0     0     0     0  # 7</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0    SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   CSD   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   CSD   FOU   FOU   FOU   BLA   BLA   BLA   SHI   SHI    0     0     0     0     # 6</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0    SHI   SHI   SHI   BLA   BLA   FOU   FOU   FOU   DIL   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   FOU   BLA   BLA   SHI   SHI   SHI    0     0     0     0  # 5</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0    SHI   SHI   SHI   BLA   BLA   FOU   FOU   FOU   FOU   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   DIL   FOU   FOU   FOU   BLA   BLA   SHI   SHI   SHI    0     0     0     # 4</code></pre>
+<pre style='margin:0;'><code>coremap     0     0    SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   CSD   FIN   FIN   DSD   FIN   FIN   CSD   FIN   FIN   CSD   FIN   FIN   DSD   FIN   FIN   CSD   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0  # 3</code></pre>
+<pre style='margin:0;'><code>coremap  0     0    SHI   SHI   SHI   SHI   BLA   BLA   FOU   FOU   DIL   FIN   FIN   FIN   FIN   FIN   FIN   FIN   DIL   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   BLA   BLA   SHI   SHI   SHI   SHI    0     0     # 2</code></pre>
+<pre style='margin:0;'><code>coremap     0    SHI   SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI   SHI    0     0  # 1</code></pre>
+<pre style='margin:0;'><code>coremap  0    SHI   SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   FIN   FIN   FIN   FIN   CSD   FIN   FIN   FIN   FIN   FIN   CSD   FIN   FIN   FIN   FIN   DIL   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI   SHI    0     # 0</code></pre>
+<pre style='margin:0;'><code>coremap     0    SHI   SHI   SHI   SHI   BLA   BLA   FOU   FOU   FOU   CSD   FIN   FIN   FIN   FIN   FIN   DIL   FIN   FIN   DIL   FIN   FIN   FIN   FIN   FIN   CSD   FOU   FOU   FOU   BLA   BLA   SHI   SHI   SHI   SHI    0     0  # 1</code></pre>
+<pre style='margin:0;'><code>coremap  0     0    SHI   SHI   SHI   SHI   BLA   BLA   FOU   FOU   DIL   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   BLA   BLA   SHI   SHI   SHI   SHI    0     0     # 2</code></pre>
+<pre style='margin:0;'><code>coremap     0     0    SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   FIN   FIN   FIN   FIN   FIN   CSD   FIN   FIN   CSD   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0  # 3</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0    SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   CSD   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   CSD   DIL   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0     # 4</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0    SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   DIL   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0     0  # 5</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0    SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FIN   FIN   FIN   FIN   FIN   DSD   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI    0     0     0     0     # 6</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0    SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   CSD   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FIN   CSD   DIL   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI    0     0     0     0     0  # 7</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0    SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   DIL   FIN   FIN   FIN   FIN   FIN   FIN   FIN   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI    0     0     0     0     0     # 8</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0    SHI   SHI   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   CSD   DIL   FOU   CSD   DIL   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   SHI   SHI    0     0     0     0     0     0  # 9</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0    SHI   SHI   SHI   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0     0     0     0     #10</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0    SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI    0     0     0     0     0     0     0  #11</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   FOU   FOU   FOU   FOU   FOU   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     #12</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0  #13</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     #14</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   BLA   BLA   BLA   BLA   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     0  #15</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     0     #16</code></pre>
+<pre style='margin:0;'><code>coremap     0     0     0     0     0     0     0     0     0    SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI   SHI    0     0     0     0     0     0     0     0     0     0  #17</code></pre>
+<pre style='margin:0;'><code>coremap  0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     0     #18</code></pre>
+<br>
+<div>The <code>coremap</code> card defined one row of assemblies in the core and consists of either boundary condition flag (<code>0</code>: vaccuum; <code>1</code>: reflective) or of a stack id (should appear in the <code>stack</code> card).</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>dnplmb</code> : Delayed neutron precursor decay time constants</div>
@@ -260,6 +326,69 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 </div>
 <br>
 <!------------------------------------------------------------------------------------------------>
+<div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>mix</code> : Homogeneous mix of isotopes</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Mix: fuel in inner zone</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
+<pre style='margin:0;'><code>#####     id        isoid     numdens             sigtemp</code></pre>
+<pre style='margin:0;'><code>mix       INNER     U235j311  3.58838E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     U238j311  7.05072E-03         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Pu238j311 6.31883E-06         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Pu239j311 8.71553E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Pu240j311 2.59858E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Pu241j311 6.98635E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Pu242j311 2.42475E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Am241j311 1.70991E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     O16j311   1.65043E-02         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     C0j311    4.75629E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Si28j311  2.25772E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Si29j311  1.10737E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Si30j311  7.06525E-06         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     P31j311   1.10562E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ti46j311  8.19752E-06         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ti47j311  7.23535E-06         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ti48j311  7.02030E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ti49j311  5.04663E-06         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ti50j311  4.73566E-06         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Cr50j311  1.58887E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Cr52j311  2.94632E-03         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Cr53j311  3.27778E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Cr54j311  8.00808E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mn55j311  3.53226E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Fe54j311  8.00560E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Fe56j311  1.21188E-02         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Fe57j311  2.74958E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Fe58j311  3.59615E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ni58j311  1.87786E-03         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ni60j311  6.99261E-04         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ni61j311  2.98974E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ni62j311  9.37938E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Ni64j311  2.31362E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo92j311  4.51168E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo94j311  2.78070E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo95j311  4.76300E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo96j311  4.96037E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo97j311  2.82709E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo98j311  7.10924E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Mo100j311 2.80498E-05         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     Na23j311  7.63797E-03         TEMP</code></pre>
+<pre style='margin:0;'><code>mix       INNER     He4j311   6.11441E-07         TEMP</code></pre>
+<br>
+<div><code>id</code>: user-defined id of the mix;</div>
+<div><code>isoid</code>: id of the isotope; the GENDF file with this name should exist in nulcera data directory <code>nddir</code>;</div>
+<div><code>numdens</code>: number density of the isotope <code>isoid</code> in the mix <code>id</code> (barn<sup>-1</sup>cm<sup>-1</sup>);</div>
+<div><code>sigtemp</code>: signal defining the temperature in K of the isotope <code>isoid</code> in the mix <code>id</code>.</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>nddir</code> : Nuclear data directory</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Nuclear data directory</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
+<pre style='margin:0;'><code>nddir     DATA25</code></pre>
+<br>
+<div><code>nddir</code>: path to directory containing multigroup cross-section files in GENDF format.</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
 <div style='background-color:#cdeefd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>pipe</code> : Pipe without free level</div>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code># Pipes</code><br>
@@ -311,6 +440,15 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <div>The time derivative of temperature in every node of the pipe is set to zero and temperature is set equal to the specified signal at the current time step.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
+<div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>power0</code> : Initial reactor power</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Initial reactor power</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
+<pre style='margin:0;'><code>power0    2990.e6</code></pre>
+<br>
+<div><code>power0</code>: initial reactor power (W).</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>signal</code> : User-defined signal</div>
 <code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
 <code style='white-space:nowrap;'># Signals</code><br>
@@ -318,13 +456,14 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 <pre style='margin:0;'><code>#####     id        value</code></pre>
 <pre style='margin:0;'><code>signal    TIME      time</code></pre>
 <pre style='margin:0;'><code>signal    PI        3.14159</code></pre>
+<pre style='margin:0;'><code>signal    TEMP      600.</code></pre>
 <br>
 <div><code>id</code>: user-defined signal id;</div>
 <div><code>type</code>: signal value.</div>
 <br>
 <div>Currently available signals (under development):</div>
    <div style='margin:0 0 0 20px'>
-   <div><code>0.0</code>: any constant numeric value;</div>
+   <div><code>3.14159</code>: any constant numeric value;</div>
    <div><code>time</code>: time of the problem(s).</div>
 </div>
 <br>
@@ -361,6 +500,79 @@ The colour code indicates the class to which the card "belongs": <code style='ba
 </div>
 <br>
 <div>Note that even if the respective cards are present in the input file, the task will not be solved unless activated by the <code>solve</code> card.</div>
+<br>
+<!------------------------------------------------------------------------------------------------>
+<div style='background-color:#fadadd; border-top:1px solid black; font-size:20px; font-weight:bold'><code>stack</code> : Vertical stack of homogeneous mixes</div>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code><br>
+<code># Stack of mixes: fissile subassembly of inner zone</code><br>
+<code style='white-space:nowrap;'>#---- ----1---- ----2---- ----3---- ----4---- ----5---- ----6---- ----7---- ----8---- ----9---- ----0----</code>
+<pre style='margin:0;'><code>#####     id        mixid     pipeid    pipenodeid</code></pre>
+<pre style='margin:0;'><code>stack     FIN       PLUG1     UP01      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      3 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      4 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      5 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      6 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      7 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP02      8 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP03      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP04      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       SUPPOR1   UP05      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP06      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP06      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP06      3 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP06      4 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP06      5 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP06      6 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      3 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      4 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      5 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      6 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      7 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      8 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      9 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      10</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      11</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      12</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      13</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      14</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      15</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      16</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      17</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      18</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      19</code></pre>
+<pre style='margin:0;'><code>stack     FIN       INNER     UP07      20</code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP08      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP08      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP08      4 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP08      5 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP08      6 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       AXBLA     UP08      3 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP09      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       GASPLE1   UP09      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       PLUG1     UP10      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       EMPTY     UP11      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       EMPTY     UP11      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       EMPTY     UP11      3 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      1 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      2 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      3 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      4 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      5 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      6 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      7 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      8 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      9 </code></pre>
+<pre style='margin:0;'><code>stack     FIN       OUTLET    UP12      10</code></pre>
+<br>
+<div><code>id</code>: user-defined id of the vertical stack of homogeneous mixes;</div>
+<div><code>mixid</code>: user-defined id of the homogeneous mix of isotopes filling the node if the stack <code>id</code> (should appear in the <code>mix</code> card);</div>
+<div><code>pipeid</code>: user-defined id of the pipe (should appear in the <code>pipe</code> card);</div>
+<div><code>pipenodeid</code>: id of the node number of the pipe <code>pipeid</code> defining the node of the stack <code>id</code>.</div><br>
+<div>Note: the stack represents a subassembly of the core. The axial nodalization of the stack is defined by linking every node of the stack with a pipe node.</div>
 <br>
 <!------------------------------------------------------------------------------------------------>
 <div style='background-color:#ccfdcc; border-top:1px solid black; font-size:20px; font-weight:bold'><code>t0</code> : Initial time</div>
